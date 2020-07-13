@@ -1,179 +1,57 @@
-# Guidelines for Project 1
+# Guidelines for ETL Project
 
 This document contains guidelines, requirements, and suggestions for Project 1.
 
 ## Team Effort
 
-Before anything, remember that Projects are a **group effort**: Working closely with your teammates is a requirement. This both helps teach real-world collaborative workflows, and enables you to tackle more difficult problems than you'd be able to working alone.
+Due to the short timeline, teamwork will be crucial to the success of this project! Work closely with your team through all phases of the project to ensure that there are no surprises at the end of the week.
 
-In other words, working in groups allows you to **work smart** and **dream big**. Take advantage of it!
+Working in a group enables you to tackle more difficult problems than you'd be able to working alone. In other words, working in a group allows you to **work smart** and **dream big**. Take advantage of it!
 
 ## Project Proposal
 
-Before you start writing any code, your group should outline the scope and purpose of your project. This helps provide direction and prevent [scope creep](https://en.wikipedia.org/wiki/Scope_creep).
+Before you start writing any code, remember that you only have one week to complete this project. View this project as a typical assignment from work. Imagine a bunch of data came in and you and your team are tasked with migrating it to a production data base.
 
-Write this as a brief summary of your interests and intent, including:
-
-* The kind of data you'd like to work with/field you're interested in (e.g., geodata, weather data, etc.)
-
-* The kinds of questions you'll be asking of that data
-
-* Possible source for such data
-
-In other words, write down what kind of data you plan to work with, and what kinds of questions you'd like to ask of it. This constitutes your Project Proposal/Outline, and should look something like this:
-
-> Our project is to uncover patterns in criminal activity around Los Angeles. We'll examine relationships between types of crime and location; crime rates and times of day; trends in crime rates over the course of the year; and related questions, as the data admits.
+Take advantage of your Instructor and TA support during office hours and class project work time. They are a valuable resource and can help you stay on track.
 
 ## Finding Data
 
-Once your group has written an outline, it's time to start hunting for data. You are free to use data from any source, but we recommend the following curated sources of high-quality data:
+Your project must use 2 or more sources of data. We recommend the following sites to use as sources of data:
 
 * [data.world](https://data.world/)
 
 * [Kaggle](https://www.kaggle.com/)
 
-* [Data.gov](https://www.data.gov)
-
-* [Public APIs](https://github.com/abhishekbanthia/Public-APIs)
-
-* [Awesome-APIs List](https://github.com/Kikobeats/awesome-api)
-
-* [Medium APIs List](https://medium.com/@benjamin_libor/a-curated-collection-of-over-150-apis-to-build-great-products-fdcfa0f361bc)
-
-Chances are you'll have to update your Project Outline as you explore the available data. **This is fine**—adjustments like this are part of the process! Just make sure everyone in the group is up-to-speed on the goals of the project as you make changes.
-
-Make sure that your data is not too large for local analysis. **Big Data** datasets are difficult to manage locally, so consider a subset of that data or a different dataset altogether.
+You can also use APIs or data scraped from the web. However, get approval from your instructor first. Again, there is only a week to complete this!
 
 ## Data Cleanup & Analysis
 
-With data in hand, it's time to tackle development and analysis. This is where the fun starts!
+Once you have identified your datasets, perform ETL on the data. Make sure to plan and document the following:
 
-Inevitably, the analysis process can be broken into two broad phases: **Exploration & Cleanup** and **Analysis** proper.
+* The sources of data that you will extract from.
 
-As you've learned, you'll need to explore, clean, and reformat your data before you can begin to answer your research questions. We recommend keeping track of these exploration and cleanup steps in a dedicated Jupyter Notebook, both for organization's sake and to make it easier to  present your work later.
+* The type of transformation needed for this data (cleaning, joining, filtering, aggregating, etc).
 
-Similarly, after you've massaged your data and are ready to start crunching numbers, you should keep track of your work in a Jupyter Notebook dedicated specifically to analysis.
+* The type of final production database to load the data into (relational or non-relational).
 
-During both phases, **don't forget to include plots**! Don't make the mistake of waiting to build figures until you're preparing your presentation. Creating them along the way can reveal insights and interesting trends in the data that you might not notice otherwise.
+* The final tables or collections that will be used in the production database.
 
-We recommend focusing your analysis on techniques such as aggregation, correlation, comparison, summary statistics, sentiment analysis, and time series analysis.
+You will be required to submit a final technical report with the above information and steps required to reproduce your ETL process.
 
-Finally, be sure that your projects meet the [technical requirements](TechnicalRequirements.md).
+## Project Report
 
-## Presentation
+At the end of the week, your team will submit a Final Report that describes the following:
 
-After you've analyzed your data to your satisfaction, you'll put together a presentation to show off your work, explain your process, and discuss your conclusions.
+* **E**xtract: your original data sources and how the data was formatted (CSV, JSON, pgAdmin 4, etc).
 
-This presentation will be delivered as a slideshow, and should give your classmates and instructional staff an overview of your work. PowerPoint, Keynote, and Google Slides are all acceptable for building slides.
+* **T**ransform: what data cleaning or transformation was required.
 
-As long as your slides meet the [presentation requirements](PresentationRequirements.md), you are free to structure the presentation however you wish, but students are often successful with the format laid out in the [presentation guidelines](PresentationGuidelines.md).
+* **L**oad: the final database, tables/collections, and why this was chosen.
 
-- - -
-
-### Copyright
-
-Coding Boot Camp © 2017. All Rights Reserved.
-
-# Presentation Guidelines
-
-You are free to structure your presentations to your liking, but students tend to have success with the following format.
-
-* Title Slide
-
-  * Include the name of the Project and Group Members
-
-* Motivation & Summary Slide
-
-  * Define the core message or hypothesis of your project.
-  * Describe the questions you asked, and _why_ you asked them
-  * Describe whether you were able to answer these questions to your satisfaction, and briefly summarize your findings
-
-* Questions & Data
-
-  * Elaborate on the questions you asked, describing what kinds of data you needed to answer them, and where you found it
-
-* Data Cleanup & Exploration
-
-  * Describe the exploration and cleanup process
-  * Discuss insights you had while exploring the data that you didn't anticipate
-  * Discuss any problems that arose after exploring the data, and how you resolved them
-  * Present and discuss interesting figures developed during exploration, ideally with the help of Jupyter Notebook
-
-* Data Analysis
-
-  * Discuss the steps you took to analyze the data and answer each question you asked in your proposal
-  * Present and discuss interesting figures developed during analysis, ideally with the help of Jupyter Notebook
-
-* Discussion
-
-  * Discuss your findings. Did you find what you expected to find? If not, why not? What inferences or general conclusions can you draw from your analysis?
-
-* Post Mortem
-
-  * Discuss any difficulties that arose, and how you dealt with them
-  * Discuss any additional questions that came up, but which you didn't have time to answer: What would you research next, if you had two more weeks?
-
-* Questions
-  * Open-floor Q&A with the audience
-
-- - -
-
-## Copyright
-
-Coding Boot Camp © 2018. All Rights Reserved.
-
-# Presentation Requirements
-
-The presentation requirements for Project 1 are as follows.
-
-Your presentation must:
-
-* [ ] Be at least 8-10 min. long
-
-* [ ] Describe the core message or hypothesis for your project.
-
-* [ ] Describe the questions you and your group found interesting, and what motivated you to answer them
-
-* [ ] Summarize where and how you found the data you used to answer these questions
-
-* [ ] Describe the data exploration and cleanup process (accompanied by your Jupyter Notebook)
-
-* [ ] Describe the analysis process (accompanied by your Jupyter Notebook)
-
-* [ ] Summarize your conclusions. This should include a numerical summary (i.e., what data did your analysis yield), as well as visualizations of that summary (plots of the final analysis data)
-
-* [ ] Discuss the implications of your findings. This is where you get to have an open-ended discussion about what your findings "mean".
-
-* [ ] Tell a good story! Storytelling through data analysis is no different than in literature. Find your narrative and use your analysis and visualization skills to highlight conflict and resolution in your data.
-
-- - -
-
-## Copyright
-
-Data Boot Camp © 2018. All Rights Reserved.
-
-# Technical Requirements
-
-The technical requirements for Project 1 are as follows.
-
-* [ ] Use Pandas to clean and format your data set(s)
-
-* [ ] Create a Jupyter Notebook describing the **data exploration and cleanup** process
-
-* [ ] Create a Jupyter Notebook illustrating the **final data analysis**
-
-* [ ] Use Matplotlib to create a total of 6-8 visualizations of your data (ideally, at least 2 per "question" you ask of your data)
-
-* [ ] Save PNG images of your visualizations to distribute to the class and instructional team, and for inclusion in your presentation
-
-* [ ] Optionally, use at least one API, if you can find an API with data pertinent to your primary research questions
-
-* [ ] Create a write-up summarizing your major findings. This should include a heading for each "question" you asked of your data, and under each heading, a short description of what you found and any relevant plots.
+Please upload the report to Github and submit a link to Bootcampspot.
 
 - - -
 
 ### Copyright
 
-Coding Boot Camp © 2017. All Rights Reserved.
-
-
+Coding Boot Camp © 2019. All Rights Reserved.
